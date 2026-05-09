@@ -1,4 +1,4 @@
-import { readdir, readFile, stat } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
 const token = process.env.VERCEL_TOKEN;
@@ -10,8 +10,8 @@ if (!token) {
   process.exit(1);
 }
 
-const ignored = new Set([".git", ".vercel", "node_modules", "scripts", "data"]);
-const ignoredFiles = new Set([".env", ".env.local"]);
+const ignored = new Set([".git", ".vercel", "api", "data", "node_modules", "scripts"]);
+const ignoredFiles = new Set([".env", ".env.local", "package.json", "README.md", "server.js", "vercel.json"]);
 const textExtensions = new Set([
   ".css",
   ".html",
@@ -46,6 +46,10 @@ function toVercelPath(filePath) {
   return path.relative(root, filePath).replaceAll(path.sep, "/");
 }
 
+function toBuildOutputPath(filePath) {
+  return `.vercel/output/static/${toVercelPath(filePath)}`;
+}
+
 async function createDeployment() {
   const diskFiles = await listFiles(root);
   const files = await Promise.all(diskFiles.map(async (filePath) => {
@@ -54,11 +58,35 @@ async function createDeployment() {
     const isText = textExtensions.has(extension);
 
     return {
-      file: toVercelPath(filePath),
+      file: toBuildOutputPath(filePath),
       data: isText ? data.toString("utf8") : data.toString("base64"),
       encoding: isText ? "utf-8" : "base64"
     };
   }));
+
+  files.push({
+    file: ".vercel/output/config.json",
+    data: JSON.stringify({
+      version: 3,
+      routes: [
+        {
+          src: "/sw.js",
+          headers: {
+            "Cache-Control": "public, max-age=0, must-revalidate"
+          },
+          continue: true
+        },
+        {
+          handle: "filesystem"
+        },
+        {
+          src: "/(.*)",
+          dest: "/index.html"
+        }
+      ]
+    }),
+    encoding: "utf-8"
+  });
 
   const response = await fetch("https://api.vercel.com/v13/deployments", {
     method: "POST",
@@ -68,7 +96,7 @@ async function createDeployment() {
     },
     body: JSON.stringify({
       name: projectName,
-      target: "preview",
+      target: "production",
       files,
       projectSettings: {
         framework: null,
