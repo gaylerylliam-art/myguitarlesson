@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title desc">
+  <title id="title">Hand playing acoustic guitar</title>
+  <desc id="desc">Warm illustration of a hand fretting strings on an acoustic guitar neck.</desc>
+  <defs>
+    <linearGradient id="wood" x1="0" x2="1">
+      <stop offset="0" stop-color="#a66a3f"/>
+      <stop offset=".45" stop-color="#c58b55"/>
+      <stop offset="1" stop-color="#f0bd73"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fbefe0"/>
+      <stop offset="1" stop-color="#d9e6d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="300" rx="34" fill="url(#bg)"/>
+  <path d="M-20 230c70-54 158-70 264-48 82 17 130 1 196-40v178H-20z" fill="#0d1b4c" opacity=".08"/>
+  <g transform="translate(18 96) rotate(-9 190 80)">
+    <rect x="0" y="54" width="430" height="66" rx="24" fill="url(#wood)"/>
+    <rect x="0" y="65" width="430" height="7" fill="#704321" opacity=".22"/>
+    <g stroke="#efe0bd" stroke-width="3">
+      <path d="M8 68h396"/>
+      <path d="M8 78h396"/>
+      <path d="M8 88h396"/>
+      <path d="M8 98h396"/>
+      <path d="M8 108h396"/>
+    </g>
+    <g stroke="#64402c" stroke-width="3" opacity=".65">
+      <path d="M78 54v66"/>
+      <path d="M128 54v66"/>
+      <path d="M181 54v66"/>
+      <path d="M237 54v66"/>
+      <path d="M296 54v66"/>
+    </g>
+  </g>
+  <g transform="translate(138 42)">
+    <path d="M36 168c-26-28-20-84 19-96l20 26c-22 11-25 39-6 61z" fill="#c58b55"/>
+    <rect x="54" y="24" width="42" height="132" rx="21" fill="#d79a67"/>
+    <rect x="100" y="5" width="42" height="154" rx="21" fill="#dca373"/>
+    <rect x="146" y="30" width="40" height="134" rx="20" fill="#d79a67"/>
+    <rect x="190" y="64" width="38" height="104" rx="19" fill="#ce8d5f"/>
+    <path d="M42 150c49-20 129-18 181 9 10 5 16 15 14 26-3 14-18 22-33 16-43-18-99-18-145 0-17 7-35-2-39-19-3-14 5-27 22-32z" fill="#bd7a4d"/>
+    <circle cx="75" cy="87" r="8" fill="#f6c445"/>
+    <circle cx="121" cy="78" r="8" fill="#f6c445"/>
+    <circle cx="166" cy="96" r="8" fill="#f6c445"/>
+  </g>
+</svg>

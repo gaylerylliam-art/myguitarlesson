@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Parts of an acoustic guitar</title>
+  <desc id="desc">Labeled acoustic guitar diagram showing headstock, tuners, nut, frets, neck, sound hole, body, bridge, strings, and saddle.</desc>
+  <defs>
+    <linearGradient id="body" x1="0" x2="1">
+      <stop offset="0" stop-color="#d78c4a"/>
+      <stop offset=".5" stop-color="#f2c36f"/>
+      <stop offset="1" stop-color="#ba6b3b"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="420" fill="#fff"/>
+  <g transform="translate(76 146)">
+    <rect x="0" y="56" width="116" height="52" rx="16" fill="#5b3828"/>
+    <circle cx="16" cy="42" r="8" fill="#cbb78e"/>
+    <circle cx="16" cy="122" r="8" fill="#cbb78e"/>
+    <circle cx="96" cy="42" r="8" fill="#cbb78e"/>
+    <circle cx="96" cy="122" r="8" fill="#cbb78e"/>
+    <rect x="112" y="70" width="20" height="24" fill="#2b211c"/>
+    <rect x="132" y="62" width="238" height="40" rx="16" fill="#80533b"/>
+    <g stroke="#d6b172" stroke-width="2">
+      <path d="M164 63v38M196 63v38M228 63v38M260 63v38M292 63v38M324 63v38"/>
+    </g>
+    <path d="M350 62c42-70 120-42 126 28 4 49-28 93-84 82-34-7-54-30-72-22-18 9-18 36-54 42-72 11-128-53-107-119 17-53 69-76 126-48 34 16 42 30 65 37Z" fill="url(#body)"/>
+    <circle cx="394" cy="106" r="40" fill="#2f2823"/>
+    <circle cx="394" cy="106" r="25" fill="#151311" opacity=".65"/>
+    <rect x="450" y="156" width="100" height="18" rx="6" fill="#4b3024"/>
+    <rect x="466" y="148" width="66" height="10" rx="4" fill="#efe0b7"/>
+    <g stroke="#f8e6bf" stroke-width="2">
+      <path d="M11 66 520 154"/>
+      <path d="M11 74 520 158"/>
+      <path d="M11 82 520 162"/>
+      <path d="M11 90 520 166"/>
+      <path d="M11 98 520 170"/>
+      <path d="M11 106 520 174"/>
+    </g>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#24545a">
+    <text x="24" y="92">Headstock</text>
+    <path d="M90 102 124 196" stroke="#24545a" stroke-width="2"/>
+    <text x="36" y="330">Tuners</text>
+    <path d="M98 312 92 265" stroke="#24545a" stroke-width="2"/>
+    <text x="196" y="76">Nut</text>
+    <path d="M216 86 206 220" stroke="#24545a" stroke-width="2"/>
+    <text x="278" y="78">Frets</text>
+    <path d="M302 88 302 212" stroke="#24545a" stroke-width="2"/>
+    <text x="356" y="56">Neck</text>
+    <path d="M380 68 390 226" stroke="#24545a" stroke-width="2"/>
+    <text x="532" y="62">Body</text>
+    <path d="M555 74 532 210" stroke="#24545a" stroke-width="2"/>
+    <text x="588" y="154">Sound hole</text>
+    <path d="M618 164 470 252" stroke="#24545a" stroke-width="2"/>
+    <text x="592" y="304">Bridge</text>
+    <path d="M610 284 574 312" stroke="#24545a" stroke-width="2"/>
+    <text x="404" y="390">Strings</text>
+    <path d="M438 370 290 244" stroke="#24545a" stroke-width="2"/>
+    <text x="520" y="384">Saddle</text>
+    <path d="M550 364 574 302" stroke="#24545a" stroke-width="2"/>
+  </g>
+</svg>
